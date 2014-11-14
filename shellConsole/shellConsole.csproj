@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{C7624B54-FEF7-45C4-BEBE-E17D9388408B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>shellConsole</RootNamespace>
+    <AssemblyName>shellConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExifLib">
+      <HintPath>..\Documents\SharpDevelop Projects\albums\packages\ExifLib.1.6.3.0\lib\net40\ExifLib.dll</HintPath>
+    </Reference>
+    <Reference Include="INIFileParser">
+      <HintPath>..\Documents\SharpDevelop Projects\albums\packages\ini-parser.2.1.1\lib\INIFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ShellUtils.cs" />
+    <Compile Include="ShellCommands.cs" />
+    <Compile Include="EventApp.cs" />
+    <Compile Include="ShellForm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.ico" />
+    <None Include="LICENSE" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\git\CLAP\CLAP\CLAP.csproj">
+      <Project>{AE79CD7B-DFFC-4156-913E-63F70A31B7C1}</Project>
+      <Name>CLAP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\git\NDepend.Path\NDepend.Path\NDepend.Path.csproj">
+      <Project>91DB9F61-1930-4781-9EE5-4E6901147980</Project>
+      <Name>NDepend.Path</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShellAlbums\ShellAlbums.csproj">
+      <Project>{5A1224E3-C226-4E28-B9F0-1D4A73237E77}</Project>
+      <Name>ShellAlbums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShellControl\ShellControl.csproj">
+      <Project>{41024A8E-375C-43CF-9114-C871439A9018}</Project>
+      <Name>ShellControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

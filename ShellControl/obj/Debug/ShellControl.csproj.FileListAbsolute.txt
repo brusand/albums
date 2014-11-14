@@ -1,0 +1,10 @@
+C:\Users\EBDU6461\ShellControl\bin\Debug\ShellControl.dll
+C:\Users\EBDU6461\ShellControl\bin\Debug\ShellControl.pdb
+C:\Users\EBDU6461\ShellControl\bin\Debug\INIFileParser.dll
+C:\Users\EBDU6461\ShellControl\bin\Debug\NDepend.Path.dll
+C:\Users\EBDU6461\ShellControl\bin\Debug\Microsoft.Contracts.dll
+C:\Users\EBDU6461\ShellControl\bin\Debug\NDepend.Path.pdb
+C:\Users\EBDU6461\ShellControl\bin\Debug\INIFileParser.pdb
+C:\Users\EBDU6461\ShellControl\obj\Debug\ShellControl.csprojResolveAssemblyReference.cache
+C:\Users\EBDU6461\ShellControl\obj\Debug\ShellControl.dll
+C:\Users\EBDU6461\ShellControl\obj\Debug\ShellControl.pdb
